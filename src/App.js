@@ -9,7 +9,7 @@ const App = () => {
     console.log(inputRef.current.value);
     setLoading(true);
     fetch(
-      `https://morning-lake-04404.herokuapp.com/q?url=${inputRef.current.value}`
+      `https://fierce-ravine-75966.herokuapp.com/q?url=${inputRef.current.value}`
     )
       .then((res) => res.json())
       .then((result) => setUUID(result.UUID));
@@ -39,7 +39,7 @@ const App = () => {
               onClick={() => {
                 document.querySelector("a").style.pointerEvents = "none";
               }}
-              href={`https://morning-lake-04404.herokuapp.com/download/${uuid}`}
+              href={`https://fierce-ravine-75966.herokuapp.com/download/${uuid}`}
               download
               disabled
             >
