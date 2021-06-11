@@ -48,7 +48,7 @@ const App = () => {
               download
               disabled
             >
-              Download !
+              Download
             </a>
             <button onClick={reset}>Download another file</button>
           </div>
@@ -59,7 +59,7 @@ const App = () => {
               className="main-input"
               type="url"
               pattern="https?://.*"
-              placeholder="Enter a valid url..."
+              placeholder="Enter a valid url...."
             />
             <span className="main-span">
               Please use http/https protocol with the link{" "}
