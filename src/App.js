@@ -8,7 +8,9 @@ const App = () => {
     e.preventDefault();
     console.log(inputRef.current.value);
     setLoading(true);
-    fetch(`http://localhost:5000/q?url=${inputRef.current.value}`)
+    fetch(
+      `https://morning-lake-04404.herokuapp.com/q?url=${inputRef.current.value}`
+    )
       .then((res) => res.json())
       .then((result) => setUUID(result.UUID));
   };
@@ -37,7 +39,7 @@ const App = () => {
               onClick={() => {
                 document.querySelector("a").style.pointerEvents = "none";
               }}
-              href={`http://localhost:5000/download/${uuid}`}
+              href={`https://morning-lake-04404.herokuapp.com/${uuid}`}
               download
               disabled
             >
