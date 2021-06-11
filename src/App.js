@@ -12,6 +12,9 @@ const App = () => {
       `https://fierce-ravine-75966.herokuapp.com/q?url=${inputRef.current.value}`,
       {
         mode: "no-cors", // 'cors' by default
+        headers: {
+          "Access-Control-Allow-Origin": "*",
+        },
       }
     )
       .then((res) => res.json())
