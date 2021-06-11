@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/pdfy-client/static/css/main.e5e8e4a6.chunk.css",
-    "main.js": "/pdfy-client/static/js/main.29a8c9e0.chunk.js",
-    "main.js.map": "/pdfy-client/static/js/main.29a8c9e0.chunk.js.map",
+    "main.js": "/pdfy-client/static/js/main.35fb6284.chunk.js",
+    "main.js.map": "/pdfy-client/static/js/main.35fb6284.chunk.js.map",
     "runtime-main.js": "/pdfy-client/static/js/runtime-main.ef570961.js",
     "runtime-main.js.map": "/pdfy-client/static/js/runtime-main.ef570961.js.map",
     "static/js/2.82cc20e0.chunk.js": "/pdfy-client/static/js/2.82cc20e0.chunk.js",
@@ -15,6 +15,6 @@
     "static/js/runtime-main.ef570961.js",
     "static/js/2.82cc20e0.chunk.js",
     "static/css/main.e5e8e4a6.chunk.css",
-    "static/js/main.29a8c9e0.chunk.js"
+    "static/js/main.35fb6284.chunk.js"
   ]
 }
