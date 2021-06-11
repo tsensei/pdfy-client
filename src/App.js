@@ -46,7 +46,7 @@ const App = () => {
               download
               disabled
             >
-              Download
+              Download !
             </a>
             <button onClick={reset}>Download another file</button>
           </div>
@@ -62,7 +62,7 @@ const App = () => {
             <span className="main-span">
               Please use http/https protocol with the link{" "}
             </span>
-            <button type="submit">Convert!</button>
+            <button type="submit">Convert!!</button>
           </form>
         )}
       </main>
