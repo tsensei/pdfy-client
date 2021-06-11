@@ -9,7 +9,10 @@ const App = () => {
     console.log(inputRef.current.value);
     setLoading(true);
     fetch(
-      `https://fierce-ravine-75966.herokuapp.com/q?url=${inputRef.current.value}`
+      `https://fierce-ravine-75966.herokuapp.com/q?url=${inputRef.current.value}`,
+      {
+        mode: "no-cors", // 'cors' by default
+      }
     )
       .then((res) => res.json())
       .then((result) => setUUID(result.UUID));
