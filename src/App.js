@@ -1,25 +1,71 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useRef, useState } from "react";
+import Loader from "react-loader-spinner";
+const App = () => {
+  const [uuid, setUUID] = useState();
+  const [loading, setLoading] = useState(false);
+  const inputRef = useRef();
+  const sendReq = (e) => {
+    e.preventDefault();
+    console.log(inputRef.current.value);
+    setLoading(true);
+    fetch(`http://localhost:5000/q?url=${inputRef.current.value}`)
+      .then((res) => res.json())
+      .then((result) => setUUID(result.UUID));
+  };
 
-function App() {
+  const reset = () => {
+    setUUID(undefined);
+  };
+
+  useEffect(() => {
+    if (uuid !== undefined) {
+      setLoading(false);
+    }
+  }, [uuid]);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header>
+        PDF<span>Y</span>
       </header>
+      <main>
+        {loading ? (
+          <Loader type="Grid" color="#00BFFF" height={100} width={100} />
+        ) : uuid ? (
+          <div className="downloadScreen">
+            <a
+              onClick={() => {
+                document.querySelector("a").style.pointerEvents = "none";
+              }}
+              href={`http://localhost:5000/download/${uuid}`}
+              download
+              disabled
+            >
+              Download
+            </a>
+            <button onClick={reset}>Download another file</button>
+          </div>
+        ) : (
+          <form className="mainForm" onSubmit={sendReq}>
+            <input
+              ref={inputRef}
+              className="main-input"
+              type="url"
+              pattern="https?://.*"
+              placeholder="Enter a valid url..."
+            />
+            <span className="main-span">
+              Please use http/https protocol with the link{" "}
+            </span>
+            <button type="submit">Convert!</button>
+          </form>
+        )}
+      </main>
+      <footer>
+        Made with ❤️️ by <a href="https://instagram.com/_tsensei_">tsensei</a>
+      </footer>
     </div>
   );
-}
+};
 
 export default App;
