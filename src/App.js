@@ -39,7 +39,7 @@ const App = () => {
               onClick={() => {
                 document.querySelector("a").style.pointerEvents = "none";
               }}
-              href={`https://morning-lake-04404.herokuapp.com/${uuid}`}
+              href={`https://morning-lake-04404.herokuapp.com/download/${uuid}`}
               download
               disabled
             >
