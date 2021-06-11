@@ -1,20 +1,20 @@
 {
   "files": {
     "main.css": "/pdfy-client/static/css/main.e5e8e4a6.chunk.css",
-    "main.js": "/pdfy-client/static/js/main.19d5e05d.chunk.js",
-    "main.js.map": "/pdfy-client/static/js/main.19d5e05d.chunk.js.map",
+    "main.js": "/pdfy-client/static/js/main.f4636eda.chunk.js",
+    "main.js.map": "/pdfy-client/static/js/main.f4636eda.chunk.js.map",
     "runtime-main.js": "/pdfy-client/static/js/runtime-main.ef570961.js",
     "runtime-main.js.map": "/pdfy-client/static/js/runtime-main.ef570961.js.map",
-    "static/js/2.82cc20e0.chunk.js": "/pdfy-client/static/js/2.82cc20e0.chunk.js",
-    "static/js/2.82cc20e0.chunk.js.map": "/pdfy-client/static/js/2.82cc20e0.chunk.js.map",
+    "static/js/2.a627df80.chunk.js": "/pdfy-client/static/js/2.a627df80.chunk.js",
+    "static/js/2.a627df80.chunk.js.map": "/pdfy-client/static/js/2.a627df80.chunk.js.map",
     "index.html": "/pdfy-client/index.html",
     "static/css/main.e5e8e4a6.chunk.css.map": "/pdfy-client/static/css/main.e5e8e4a6.chunk.css.map",
-    "static/js/2.82cc20e0.chunk.js.LICENSE.txt": "/pdfy-client/static/js/2.82cc20e0.chunk.js.LICENSE.txt"
+    "static/js/2.a627df80.chunk.js.LICENSE.txt": "/pdfy-client/static/js/2.a627df80.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.ef570961.js",
-    "static/js/2.82cc20e0.chunk.js",
+    "static/js/2.a627df80.chunk.js",
     "static/css/main.e5e8e4a6.chunk.css",
-    "static/js/main.19d5e05d.chunk.js"
+    "static/js/main.f4636eda.chunk.js"
   ]
 }
