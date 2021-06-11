@@ -4,18 +4,20 @@ const App = () => {
   const [uuid, setUUID] = useState();
   const [loading, setLoading] = useState(false);
   const inputRef = useRef();
-  const sendReq = (e) => {
+  const sendReq = async (e) => {
     e.preventDefault();
     console.log(inputRef.current.value);
     setLoading(true);
     fetch(
       `https://fierce-ravine-75966.herokuapp.com/q?url=${inputRef.current.value}`,
       {
-        mode: "no-cors", // 'cors' by default
+        headers: {
+          "Access-Control-Allow-Origin": "*",
+        },
       }
     )
       .then((res) => res.json())
-      .then((result) => setUUID(result.UUID));
+      .then((body) => setUUID(body.UUID));
   };
 
   const reset = () => {
